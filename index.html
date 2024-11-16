@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Style</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #000000;
+        }
+
+        .telegram-container {
+            width: 400px;
+            border: 1px solid #D3D3D3;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #0088cc;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .message {
+            padding: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message .sender {
+            font-weight: bold;
+            color: #0088cc;
+            margin-bottom: 5px;
+        }
+
+        .message .text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message.user {
+            background-color: #e3f2fd;
+        }
+
+        .message.bot {
+            background-color: #f9f9f9;
+        }
+
+        .input-box {
+            padding: 10px;
+            border-top: 1px solid #D3D3D3;
+            background-color: #f9f9f9;
+            display: flex;
+        }
+
+        .input-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D3D3D3;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .input-box button {
+            margin-left: 10px;
+            padding: 10px;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .input-box button:hover {
+            background-color: #0077bb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="telegram-container">
+        <div class="header">
+            Telegram Chat
+        </div>
+        
+        <div class="message user">
+            <div class="sender">User</div>
+            <div class="text">Привет! Как дела?</div>
+        </div>
+        
+        <div class="message bot">
+            <div class="sender">Bot</div>
+            <div class="text">Привет! Всё отлично, спасибо за вопрос!</div>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="Напишите сообщение...">
+            <button>Отправить</button>
+        </div>
+    </div>
+
+</body>
+</html>
